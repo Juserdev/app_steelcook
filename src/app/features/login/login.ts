@@ -52,7 +52,7 @@ loginForm.addEventListener("submit", async (e) => {
 
   if (ACCESS_TOKEN) {
     localStorage.setItem('access_token', ACCESS_TOKEN)
-    window.location.href = "/system/dashboard/index.html"
+    window.location.href = '/system/dashboard/'
   } else {
     alert('Login fallido, revisa tus credenciales')
   }
