@@ -42,9 +42,9 @@ interface QP_Totals {
 
 export interface Quote_Public {
   quotation_id: string
-  profile: QP_Profile
-  settings: QP_Settings
-  client: QP_Client
+  profile_snapshot: QP_Profile & { logo?: string }
+  quote_settings: QP_Settings
+  client_snapshot: QP_Client
   items: QP_Items[]
   totals: QP_Totals
 }

@@ -7,7 +7,7 @@ import type { Send_Quote_Settings } from "@/app/features/quote-settings/types/qu
 import { parce_formatted_number } from "@/app/shared/utils/format/parce-formatted-number.utils"
 
 
-export function extract_quotation_form(form: HTMLFormElement): Send_Create_Quotation {
+export function extract_quotation_form(form: HTMLFormElement, logo?: string): Send_Create_Quotation {
   const formData = new FormData(form)
 
   const dq_profile_company = String(formData.get('profile_name'))
@@ -21,7 +21,8 @@ export function extract_quotation_form(form: HTMLFormElement): Send_Create_Quota
     company_id: dq_profile_id,
     email: dq_profile_email,
     phone: dq_profile_phone,
-    address: dq_profile_address
+    address: dq_profile_address,
+    logo: logo ?? '' // <---- añadido ahora
   }
 
   const dq_settings_obsevations = String(formData.get('settings_observations'))

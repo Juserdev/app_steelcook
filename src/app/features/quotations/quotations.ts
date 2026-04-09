@@ -26,13 +26,16 @@ export function content_quotations(
   products: Products[]
 
 ): HTMLDivElement {
+
+  const logo = profile[0].logo
+
   const quotation_header = quotation_headers()
   const list = quotation_list(quoatations, quotation_header)
   const form = quotation_form(quotation_header, profile, quote_settings, clients, products)
 
   input_to_dataset_price(form, input_name_prices)
 
-  handle_submit(TOKEN, form, extract_quotation_form, createQuotation, editQuotation)
+  handle_submit(TOKEN, form, extract_quotation_form, createQuotation, editQuotation, logo!)
   handle_edit_open(quoatations, quotation_header, form, { item: 'quotation-file', list: 'list-container-quotations' }, fill_quotation_form)
   handle_delete_from_list(TOKEN, list, 'quotation', deleteQuotation)
 
