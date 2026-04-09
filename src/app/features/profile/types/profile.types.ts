@@ -51,5 +51,5 @@ export interface Profile_Config {
   }
 }
 
-export interface Send_Quote_Profile extends Omit<Profile, 'created_at' | 'id' | 'logo'> { }
+export interface Send_Quote_Profile extends Omit<Profile, 'created_at' | 'id'> { } // <----- quite el logo del extends
 export interface Send_Profile extends Omit<Profile, 'created_at' | 'id'> { }
