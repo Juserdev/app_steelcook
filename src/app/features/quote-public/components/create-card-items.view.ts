@@ -11,10 +11,15 @@ export function create_card_items(qp: Quote_Public): HTMLDivElement {
   title.classList.add('subtitle')
   items_container.appendChild(title)
 
+  const items_cards = document.createElement('div')
+  items_cards.classList.add('items-cards')
+
+  items_container.appendChild(items_cards)
+
   const items = items_config(qp)
   items.forEach(item => {
     const card = create_card(qp, () => item)
-    items_container.appendChild(card)
+    items_cards.appendChild(card)
   })
 
   return items_container

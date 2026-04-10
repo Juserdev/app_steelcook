@@ -9,28 +9,15 @@ export function create_card(
 ): HTMLDivElement {
 
   const container_card = document.createElement('div')
-  container_card.classList.add('card', 'container-card')
+  container_card.classList.add('card')
 
   if (card_name) {
+    container_card.classList.add(`card-${card_name}`)
+
     const title = document.createElement('h2')
     title.classList.add('subtitle')
     title.textContent = card_name!
     container_card.appendChild(title)
-  }
-
-
-  if (company_logo) {
-
-    const container_logo = document.createElement('div')
-    container_logo.classList.add('container-logo')
-
-    const logo = document.createElement('img')
-    logo.classList.add('logo')
-    logo.src = company_logo!
-    logo.alt = 'logo'
-
-    container_logo.appendChild(logo)
-    container_card.appendChild(container_logo)
   }
 
   const container_info = document.createElement('div')
@@ -54,7 +41,23 @@ export function create_card(
     container_info.appendChild(items_info)
   })
 
-  container_card.appendChild(container_info)
+  if (company_logo) {
+
+    const container_company = document.createElement('div')
+    container_company.classList.add('container-company')
+
+    const logo = document.createElement('img')
+    logo.classList.add('logo')
+    logo.src = company_logo!
+    logo.alt = 'logo'
+
+    container_company.appendChild(logo)
+    container_card.appendChild(container_company)
+    container_company.appendChild(container_info)
+  } else {
+    container_card.appendChild(container_info)
+  }
+
 
   return container_card
 
