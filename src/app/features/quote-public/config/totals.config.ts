@@ -4,46 +4,46 @@ import type { Quote_Public } from "@/app/features/quote-public/types/quote-publi
 export function totals_config(qp: Quote_Public): Info_Config[] {
   return [
     {
-      class_item: 'item-total',
+      class_item: 'row-container',
       title: 'Sutotal: ',
-      class_title: 'title-total',
+      class_title: 'row-title',
       content: String(qp.subtotal),
-      class_content: 'text-total'
+      class_content: 'row-text'
     },
     {
-      class_item: 'item-total',
+      class_item: 'row-container',
       title: 'Descuento: ',
-      class_title: 'title-total',
+      class_title: 'row-title',
       content: String(qp.discount),
-      class_content: 'text-total'
+      class_content: 'row-text'
     },
     {
-      class_item: 'item-total',
+      class_item: 'row-container',
       title: 'Neto: ',
-      class_title: 'title-total',
+      class_title: 'row-title',
       content: String(qp.net),
-      class_content: 'text-total'
+      class_content: 'row-text'
     },
     {
-      class_item: 'item-total',
+      class_item: 'row-container',
       title: 'Impuestos: ',
-      class_title: 'title-total',
+      class_title: 'row-title',
       content: String(qp.tax_rate),
-      class_content: 'text-total'
+      class_content: 'row-text'
     },
     {
-      class_item: 'item-total',
+      class_item: 'row-container',
       title: 'Total inpuestos: ',
-      class_title: 'title-total',
+      class_title: 'row-title',
       content: String(qp.tax_amount),
-      class_content: 'text-total'
+      class_content: 'row-text'
     },
     {
-      class_item: 'item-total',
+      class_item: 'row-container',
       title: 'Total: ',
-      class_title: 'title-total',
+      class_title: 'row-title',
       content: String(qp.total),
-      class_content: 'text-total'
+      class_content: 'row-text'
     }
   ] as const satisfies Info_Config[]
 
