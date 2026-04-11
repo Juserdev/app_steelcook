@@ -5,7 +5,6 @@ export function create_card(
   qp: Quote_Public,
   card_config: (qp: Quote_Public) => Info_Config[],
   card_name?: string,
-  company_logo?: string
 ): HTMLDivElement {
 
   const container_card = document.createElement('div')
@@ -41,22 +40,8 @@ export function create_card(
     container_info.appendChild(items_info)
   })
 
-  if (company_logo) {
+  container_card.appendChild(container_info)
 
-    const container_company = document.createElement('div')
-    container_company.classList.add('container-company')
-
-    const logo = document.createElement('img')
-    logo.classList.add('logo')
-    logo.src = company_logo!
-    logo.alt = 'logo'
-
-    container_company.appendChild(logo)
-    container_card.appendChild(container_company)
-    container_company.appendChild(container_info)
-  } else {
-    container_card.appendChild(container_info)
-  }
 
 
   return container_card
