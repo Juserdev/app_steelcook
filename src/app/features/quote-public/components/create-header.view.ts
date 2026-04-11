@@ -29,7 +29,7 @@ export function container_header(qp: Quote_Public): HTMLDivElement {
   const date_quotation = formatted_date(qp.created_at)
   date.textContent = date_quotation
 
-  container_info_header.append(date, id)
+  container_info_header.append(id, date)
 
   container.append(container_company, container_info_header)
   return container
