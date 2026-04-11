@@ -1,3 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+  --ff: "Manrope", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--ff);
+}
+
+#app {
+  width: 100vw;
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+}
+
 .logo {
-  width: 200px;
+  width: 50%;
+}
+
+.header,
+.main {
+  max-width: 1300px;
+  width: 100%;
+  padding: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.subtitle {
+  padding-bottom: 1rem;
+}
+
+.container-company {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card {
+  padding: 1rem;
+  outline: 1px dashed black;
+  border-radius: 1rem;
+}
+
+.card-Empresa {
+  grid-column: 1/2;
+}
+
+.card-Empresa>.subtitle {
+  grid-column: 1/3;
+}
+
+.card-Cliente {
+  grid-column: 2/3;
+}
+
+.card-Condiciones {
+  grid-column: 3/5;
+}
+
+.items {
+  grid-column: 1/4;
+  outline: 1px dashed black;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.total {
+  grid-column: 5/6;
+}
+
+.items-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.items-cards> :last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
+.container-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.row-container {
+  border-bottom: 1px dashed black;
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.row-title {
+  font-weight: 900;
+}
+
+.row-text {
+  text-align: end;
+}
+
+@media (width <=600px) {
+  #app {
+    padding: 0.3rem;
+  }
+
+  .main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .logo {
+    width: 100%;
+  }
+
+  .items-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+
 }

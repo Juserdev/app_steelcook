@@ -18,7 +18,7 @@ const app = document.querySelector('#app')
 function container_header(qp: Quote_Public): HTMLDivElement {
 
   const container = document.createElement('div')
-  container.classList.add('container-header')
+  container.classList.add('header')
 
   const id = document.createElement('h1')
   id.classList.add('quotation-id')
@@ -35,7 +35,6 @@ function container_header(qp: Quote_Public): HTMLDivElement {
   return container
 }
 
-const header = container_header(qp)
 
 // main
 
@@ -48,20 +47,21 @@ function container_main(qp: Quote_Public) {
 
   const profile = create_card(qp, profile_config, 'Empresa', company_logo)
   const client = create_card(qp, client_config, 'Cliente')
-  const conditions = create_card(qp, conditions_config, 'Terminos y condiciones')
+  const conditions = create_card(qp, conditions_config, 'Condiciones')
   const items_container = create_card_items(qp)
   const totals = create_card(qp, totals_config, 'Total')
 
-
-
   main.append(profile, client, conditions, items_container, totals)
-
 
   return main
 
-
 }
+const container_general = document.createElement('div')
+container_general.classList.add('container-general')
 
+const header = container_header(qp)
 const main = container_main(qp)
 
-app?.append(header, main)
+container_general.append(header, main)
+
+app?.appendChild(container_general)

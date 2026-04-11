@@ -7,5 +7,5 @@ export function formatted_date(date: string) {
   const month = qp_date.getMonth()
   const year = String(qp_date.getFullYear())
 
-  return `${day} ${months[month]} ${year}`
+  return `${months[month]} ${day}, ${year}`
 }
