@@ -6,10 +6,10 @@ export function create_card_items(qp: Quote_Public): HTMLDivElement {
   const items_container = document.createElement('div')
   items_container.classList.add('items')
 
-  const title = document.createElement('h2')
-  title.textContent = 'Items'
-  title.classList.add('subtitle')
-  items_container.appendChild(title)
+  // const title = document.createElement('h2')
+  // title.textContent = 'Items'
+  // title.classList.add('subtitle')
+  // items_container.appendChild(title)
 
   const items_cards = document.createElement('div')
   items_cards.classList.add('items-cards')
@@ -18,9 +18,10 @@ export function create_card_items(qp: Quote_Public): HTMLDivElement {
 
   const items = items_config(qp)
   items.forEach(item => {
-    const card = create_card(qp, () => item)
+    const card = create_card(qp, () => item, 'Item')
     items_cards.appendChild(card)
   })
 
   return items_container
+  // return items_cards
 }
