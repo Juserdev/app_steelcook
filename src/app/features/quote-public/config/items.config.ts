@@ -1,5 +1,6 @@
 import type { Info_Config } from "@/app/features/quote-public/types/info-config.types";
 import type { Quote_Public } from "@/app/features/quote-public/types/quote-public.types";
+import { format_thousands_with_dots } from "@/app/shared/utils/format/format-numeric-input.utils";
 
 export function items_config(qp: Quote_Public): Info_Config[][] {
   return qp.items.map(element => [
@@ -15,7 +16,7 @@ export function items_config(qp: Quote_Public): Info_Config[][] {
       title: 'name: ',
       class_title: 'row-title',
       content: element.name,
-      class_content: 'rrow-text'
+      class_content: 'row-text'
     },
     {
       class_item: 'row-container',
@@ -28,8 +29,8 @@ export function items_config(qp: Quote_Public): Info_Config[][] {
       class_item: 'row-container',
       title: 'Precio: ',
       class_title: 'row-title',
-      content: String(element.price),
-      class_content: 'rrow-text'
+      content: `$${format_thousands_with_dots(String(element.price))}`,
+      class_content: 'row-text'
     },
     {
       class_item: 'row-container',
@@ -42,7 +43,7 @@ export function items_config(qp: Quote_Public): Info_Config[][] {
       class_item: 'row-container',
       title: 'total: ',
       class_title: 'row-title',
-      content: String(element.total),
+      content: `$${format_thousands_with_dots(String(element.total))}`,
       class_content: 'row-text'
     }
   ])
