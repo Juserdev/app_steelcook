@@ -3,7 +3,7 @@
 :root {
   --ff: "Manrope", sans-serif;
   --before-gradient: linear-gradient(180deg, #f6ef30 1%, #f6b130 35%, rgba(199, 89, 50, 1) 100%);
-  --bg-gradient: radial-gradient(circle, rgb(35, 35, 59) 0%, rgb(3, 3, 6) 100%);
+  --bg-gradient: radial-gradient(circle at center, #1a1a3a 0%, #0a0a12 60%, #000000 100%);
   --text-main: rgba(255, 255, 255, 0.95);
   --text-muted: rgba(234, 234, 234, 0.93);
   --text-dim: rgba(255, 255, 255, 0.50);
@@ -26,8 +26,7 @@
     url(../../../../assets/icons/bg-points.png) repeat,
     var(--bg-gradient);
   background-attachment: fixed;
-  background-blend-mode: overlay;
-  /* background-blend-mode: overlay; */
+  /* background-blend-mode: soft-light; */
 
   color: white;
 }
@@ -87,16 +86,19 @@
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+
   padding: 1.2rem;
   border-radius: 1rem;
-  /* background-color: rgb(236, 236, 236); */
   background-color: transparent;
 
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
 
   border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.707);
+
 }
 
 .card-Empresa {
@@ -117,12 +119,10 @@
 
 .items {
   grid-column: 1/4;
-  /* outline: 1px dashed black;
-  border-radius: 1rem;
-  padding: 1rem; */
 }
 
-.card-total {
+.card-Total {
+  justify-content: center;
   grid-column: 4/5;
 }
 
@@ -169,11 +169,12 @@
 }
 
 .row-title {
-  font-weight: 900;
+  font-weight: 600;
   color: var(--text-dim);
 }
 
 .row-text {
+  font-weight: 100;
   text-align: end;
   color: var(--text-main);
 }
