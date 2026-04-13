@@ -2,6 +2,11 @@
 
 :root {
   --ff: "Manrope", sans-serif;
+  --before-gradient: linear-gradient(180deg, #f6ef30 1%, #f6b130 35%, rgba(199, 89, 50, 1) 100%);
+  --bg-gradient: radial-gradient(circle at center, #1a1a3a 0%, #0a0a12 60%, #000000 100%);
+  --text-main: rgba(255, 255, 255, 0.95);
+  --text-muted: rgba(234, 234, 234, 0.93);
+  --text-dim: rgba(255, 255, 255, 0.50);
 }
 
 * {
@@ -17,6 +22,13 @@
   display: grid;
   place-items: center;
   padding: 2rem;
+  background:
+    url(../../../../assets/icons/bg-points.png) repeat,
+    var(--bg-gradient);
+  background-attachment: fixed;
+  /* background-blend-mode: soft-light; */
+
+  color: white;
 }
 
 .header,
@@ -45,11 +57,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: end;
 }
 
 .date,
 .quotation-id {
   font-size: clamp(0.9rem, 3.5vw, 2rem);
+  color: var(--text-muted);
+  text-align: end;
 }
 
 .main {
@@ -60,6 +75,7 @@
 
 .subtitle {
   padding-bottom: 1rem;
+  color: var(--text-main);
 }
 
 .container-company {
@@ -70,9 +86,19 @@
 }
 
 .card {
-  padding: 1rem;
-  outline: 1px dashed black;
+  display: flex;
+  flex-direction: column;
+
+  padding: 1.2rem;
   border-radius: 1rem;
+  background-color: transparent;
+
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.707);
+
 }
 
 .card-Empresa {
@@ -93,12 +119,10 @@
 
 .items {
   grid-column: 1/4;
-  /* outline: 1px dashed black;
-  border-radius: 1rem;
-  padding: 1rem; */
 }
 
-.card-total {
+.card-Total {
+  justify-content: center;
   grid-column: 4/5;
 }
 
@@ -106,15 +130,28 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.items-cards:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--before-gradient);
+  ;
 }
 
 .items-cards> :last-child:nth-child(odd) {
   grid-column: 1 / -1;
 }
 
-.card-Item {
-  outline-color: red;
-}
+/* .card-Item {
+  border-color: red;
+} */
 
 .container-info {
   display: flex;
@@ -124,7 +161,7 @@
 }
 
 .row-container {
-  border-bottom: 1px dashed black;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.272);
   padding: 0.5rem 0;
   display: flex;
   justify-content: space-between;
@@ -132,11 +169,14 @@
 }
 
 .row-title {
-  font-weight: 900;
+  font-weight: 600;
+  color: var(--text-dim);
 }
 
 .row-text {
+  font-weight: 100;
   text-align: end;
+  color: var(--text-main);
 }
 
 .card-Item .container-info .row-container .row-text {
@@ -151,6 +191,9 @@
   border-bottom: none;
 }
 
+.row-container:last-child {
+  border-bottom: none;
+}
 
 /* Meida Query */
 
