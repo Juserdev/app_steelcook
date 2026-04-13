@@ -1,0 +1,1 @@
+function e(e){return e.replace(/\D/g,``).replace(/\B(?=(\d{3})+(?!\d))/g,`.`)}export{e as t};
