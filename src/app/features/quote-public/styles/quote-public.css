@@ -2,8 +2,8 @@
 
 :root {
   --ff: "Manrope", sans-serif;
-  --bg-gradient: radial-gradient(circle at center, rgba(30, 30, 45, 1) 0%, rgba(5, 5, 10, 1) 60%, rgba(0, 0, 0, 1) 100%);
-  --before-gradient: linear-gradient(180deg, #f6ef30 1%, #f6b130 35%, #c75932 100%);
+  --before-gradient: linear-gradient(180deg, #f6ef30 1%, #f6b130 35%, rgba(199, 89, 50, 1) 100%);
+  --bg-gradient: radial-gradient(circle, rgb(35, 35, 59) 0%, rgb(3, 3, 6) 100%);
   --text-main: rgba(255, 255, 255, 0.95);
   --text-muted: rgba(234, 234, 234, 0.93);
   --text-dim: rgba(255, 255, 255, 0.50);
@@ -26,7 +26,7 @@
     url(../../../../assets/icons/bg-points.png) repeat,
     var(--bg-gradient);
   background-attachment: fixed;
-  /* background-blend-mode: soft-light; */
+  background-blend-mode: overlay;
   /* background-blend-mode: overlay; */
 
   color: white;
@@ -89,9 +89,9 @@
   padding: 1.2rem;
   border-radius: 1rem;
   /* background-color: rgb(236, 236, 236); */
-  background: transparent;
+  background-color: transparent;
 
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(50px);
 
   border: 1px solid rgba(255, 255, 255, 0.15);
@@ -169,12 +169,12 @@
 
 .row-title {
   font-weight: 900;
-  color: var(--text-main);
+  color: var(--text-dim);
 }
 
 .row-text {
   text-align: end;
-  color: var(--text-muted);
+  color: var(--text-main);
 }
 
 .card-Item .container-info .row-container .row-text {
