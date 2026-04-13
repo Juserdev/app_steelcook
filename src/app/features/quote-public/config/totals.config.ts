@@ -1,5 +1,6 @@
 import type { Info_Config } from "@/app/features/quote-public/types/info-config.types";
 import type { Quote_Public } from "@/app/features/quote-public/types/quote-public.types";
+import { format_thousands_with_dots } from "@/app/shared/utils/format/format-numeric-input.utils";
 
 export function totals_config(qp: Quote_Public): Info_Config[] {
   return [
@@ -7,21 +8,21 @@ export function totals_config(qp: Quote_Public): Info_Config[] {
       class_item: 'row-container',
       title: 'Sutotal: ',
       class_title: 'row-title',
-      content: String(qp.subtotal),
+      content: `$${format_thousands_with_dots(String(qp.subtotal))}`,
       class_content: 'row-text'
     },
     {
       class_item: 'row-container',
       title: 'Descuento: ',
       class_title: 'row-title',
-      content: String(qp.discount),
+      content: `$${format_thousands_with_dots(String(qp.discount))}`,
       class_content: 'row-text'
     },
     {
       class_item: 'row-container',
       title: 'Neto: ',
       class_title: 'row-title',
-      content: String(qp.net),
+      content: `$${format_thousands_with_dots(String(qp.net))}`,
       class_content: 'row-text'
     },
     {
@@ -35,14 +36,14 @@ export function totals_config(qp: Quote_Public): Info_Config[] {
       class_item: 'row-container',
       title: 'Total inpuestos: ',
       class_title: 'row-title',
-      content: String(qp.tax_amount),
+      content: `$${format_thousands_with_dots(String(qp.tax_amount))}`,
       class_content: 'row-text'
     },
     {
       class_item: 'row-container',
       title: 'Total: ',
       class_title: 'row-title',
-      content: String(qp.total),
+      content: `$${format_thousands_with_dots(String(qp.total))}`,
       class_content: 'row-text'
     }
   ] as const satisfies Info_Config[]
