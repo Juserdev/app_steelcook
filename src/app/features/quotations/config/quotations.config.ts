@@ -21,7 +21,7 @@ export const quotations_config: Quotations_Config = {
     phone: 'quotation-phone',
     total: 'quotation-total',
     date: 'quotation-date',
-    button: "quotation-vew-btn"
+    button: "quotation-view-btn"
   },
   add_quotation_btn: {
     class: 'add-quotation-btn',

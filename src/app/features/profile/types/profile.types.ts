@@ -23,7 +23,10 @@ export interface Profile_Config {
   }
   logo: string,
   profile_class: {
-    file: string,
+    file: {
+      class: string
+      common: string
+    }
     company: string
     company_id: string
     email: string

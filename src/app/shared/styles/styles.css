@@ -67,7 +67,7 @@
 .add-client-btn,
 .add-product-btn,
 .add-quotation-btn,
-.btn-edit-profile,
+.btn-all,
 .btn-form-client,
 .btn-form-product,
 .btn-form-profile,
@@ -122,7 +122,7 @@
   .add-client-btn,
   .add-product-btn,
   .add-quotation-btn,
-  .btn-edit-profile,
+  .btn-all,
   .btn-form-client,
   .btn-form-product,
   .btn-form-profile,
@@ -130,6 +130,14 @@
   .btn-edit-quote-settings,
   .btn-form-quote-settings {
     width: 100%;
+  }
+
+  .profile-file {
+    display: flex;
+    flex-direction: column;
+    outline: 1px dashed rgb(182, 182, 182);
+    padding: 0.5rem;
+    border-radius: 1rem;
   }
 
   span[data-item] {

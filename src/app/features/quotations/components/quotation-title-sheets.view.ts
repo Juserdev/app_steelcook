@@ -76,8 +76,7 @@ export function quotation_title_sheets(quotations: Quotations[], container: HTML
 
     remove_container.appendChild(remove)
 
-    icons_container.appendChild(edit_container)
-    icons_container.appendChild(remove_container)
+    icons_container.append(edit_container, remove_container)
 
     quotation_file.appendChild(icons_container)
 
