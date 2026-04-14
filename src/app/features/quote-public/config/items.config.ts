@@ -13,7 +13,7 @@ export function items_config(qp: Quote_Public): Info_Config[][] {
     },
     {
       class_item: 'row-container',
-      title: 'name: ',
+      title: 'Nombre: ',
       class_title: 'row-title',
       content: element.name,
       class_content: 'row-text'

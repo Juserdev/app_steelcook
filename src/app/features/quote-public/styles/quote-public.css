@@ -91,7 +91,8 @@
 
   padding: 1.2rem;
   border-radius: 1rem;
-  background-color: transparent;
+  /* background-color: transparent; */
+  background-color: rgba(26, 26, 58, 0.0);
 
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
