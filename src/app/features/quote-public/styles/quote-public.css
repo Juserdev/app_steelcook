@@ -91,14 +91,30 @@
 
   padding: 1.2rem;
   border-radius: 1rem;
-  background-color: transparent;
+  /* background-color: transparent; */
+  /* background-color: rgba(26, 26, 58, 0.2); */
 
-  backdrop-filter: blur(3px);
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000;
+
+  /* Ajuste de color para que no se vea "feo" si el blur falla */
+  background-color: rgba(26, 26, 58, 0.3);
+
   -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
 
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.707);
 
+
+
+}
+
+@supports not (backdrop-filter: blur(1px)) {
+  .card {
+    background-color: rgba(26, 26, 58, 0.8);
+  }
 }
 
 .card-Empresa {
@@ -213,6 +229,11 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+  }
+
+  .row-text,
+  .row-text {
+    font-size: .8rem;
   }
 
 
