@@ -56,18 +56,28 @@ export function quotation_title_sheets(quotations: Quotations[], container: HTML
     const icons_container = document.createElement('div')
     icons_container.classList.add(quotations_config.icons.container_class)
 
+    const edit_container = document.createElement('div')
+    edit_container.classList.add('edit-container', 'er-container')
+
     const edit = document.createElement('img')
     edit.src = icon_edit.src
     edit.alt = icon_edit.alt
     edit.classList.add(icon_edit.class)
+
+    edit_container.appendChild(edit)
+
+    const remove_container = document.createElement('div')
+    remove_container.classList.add('remove-container', 'er-container')
 
     const remove = document.createElement('img')
     remove.src = icon_remove.src
     remove.alt = icon_remove.alt
     remove.classList.add(icon_remove.class)
 
-    icons_container.appendChild(edit)
-    icons_container.appendChild(remove)
+    remove_container.appendChild(remove)
+
+    icons_container.appendChild(edit_container)
+    icons_container.appendChild(remove_container)
 
     quotation_file.appendChild(icons_container)
 

@@ -27,7 +27,7 @@ export const quotations_config: Quotations_Config = {
     class: 'add-quotation-btn',
     text: 'Agregar cotizacion'
   }, icons: {
-    container_class: 'conatiner-quotation-icons',
+    container_class: 'conatiner-icons',
     edit: {
       src: icons.edit,
       alt: 'icon edit',
