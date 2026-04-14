@@ -72,10 +72,10 @@ export function extract_quotation_form(form: HTMLFormElement, logo?: string): Se
   const dq_quote_code = String(formData.get('total_code'))
 
   const dq_total_subtotal = String(formData.get('total_subtotal'))
-  const dq_total_discount = Number(formData.get('total_discount'))
+  const dq_total_discount = String(formData.get('total_discount'))
   const dq_total_net = String(formData.get('total_net'))
   const dq_total_tax_rate = Number(formData.get('total_tax_rate'))
-  const dq_total_tax_amount = Number(formData.get('total_tax_amount'))
+  const dq_total_tax_amount = String(formData.get('total_tax_amount'))
   const dq_total_total = String(formData.get('total_total'))
 
   const new_quote: Send_Create_Quotation = {
@@ -85,10 +85,10 @@ export function extract_quotation_form(form: HTMLFormElement, logo?: string): Se
     client_snapshot: dq_clients,
     items: dq_items,
     subtotal: parce_formatted_number(dq_total_subtotal),
-    discount: dq_total_discount,
+    discount: parce_formatted_number(dq_total_discount),
     net: parce_formatted_number(dq_total_net),
     tax_rate: dq_total_tax_rate,
-    tax_amount: dq_total_tax_amount,
+    tax_amount: parce_formatted_number(dq_total_tax_amount),
     total: parce_formatted_number(dq_total_total)
   }
 
