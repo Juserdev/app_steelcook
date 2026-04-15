@@ -22,12 +22,4 @@
     display: none;
   }
 
-  .client-file {
-    display: flex;
-    flex-direction: column;
-    outline: 1px dashed rgb(182, 182, 182);
-    padding: 0.5rem;
-    border-radius: 1rem;
-  }
-
 }

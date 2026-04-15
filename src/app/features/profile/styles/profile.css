@@ -19,10 +19,4 @@
     display: none;
   }
 
-  .profile-file {
-    display: flex;
-    flex-direction: column;
-  }
-
-
 }

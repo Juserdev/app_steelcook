@@ -131,7 +131,7 @@
     width: 100%;
   }
 
-  .profile-file {
+  .all-file {
     display: flex;
     flex-direction: column;
     outline: 1px dashed rgb(182, 182, 182);

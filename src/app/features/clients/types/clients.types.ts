@@ -19,7 +19,10 @@ export interface Clients_config {
     text: string
   }
   clients_class: {
-    file: string
+    file: {
+      class: string
+      common: string
+    }
     name: string
     id: string
     email: string
