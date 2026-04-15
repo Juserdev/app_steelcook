@@ -9,7 +9,7 @@ export function handle_edit_open<T>(
   onEdit: (id: string, form: HTMLFormElement, option: T[]) => void
 ) {
 
-  const icon_edit = container.querySelectorAll<HTMLImageElement>('.icon-edit')
+  const icon_edit = container.querySelectorAll<HTMLImageElement>('.edit-container')
 
   icon_edit.forEach(edit => {
     edit.addEventListener('click', e => {

@@ -58,8 +58,7 @@
   padding: 0.1rem auto;
 }
 
-.icon-edit:hover,
-.icon-delete:hover {
+.er-container:hover {
   background-color: rgb(206, 202, 202);
   color: white;
 }
