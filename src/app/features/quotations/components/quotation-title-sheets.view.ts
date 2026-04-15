@@ -10,7 +10,7 @@ export function quotation_title_sheets(quotations: Quotations[], container: HTML
     const icon_remove = quotations_config.icons.remove
 
     const quotation_file = document.createElement('div')
-    quotation_file.classList.add(quotations_config.quotations_class.file)
+    quotation_file.classList.add(quotations_config.quotations_class.file.class, quotations_config.quotations_class.file.common)
     quotation_file.dataset.id = quotation.id
 
     const quotation_id = document.createElement('span')

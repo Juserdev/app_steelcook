@@ -7,7 +7,7 @@ export function quote_setting_title() {
   list_container.classList.add(quote_settings_config.qs.file)
 
   const quote_settings_titles_sheet_container = document.createElement("div")
-  quote_settings_titles_sheet_container.classList.add("quote-settings-titles-sheet")
+  quote_settings_titles_sheet_container.classList.add("quote-settings-titles-sheet", 'all-titles-sheet')
 
   list_container.appendChild(quote_settings_titles_sheet_container)
 

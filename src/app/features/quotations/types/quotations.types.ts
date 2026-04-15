@@ -48,7 +48,10 @@ export interface Quotations_Config {
     text_button: string
   },
   quotations_class: {
-    file: string
+    file: {
+      class: string
+      common: string
+    }
     id: string
     client: string
     phone: string

@@ -48,21 +48,10 @@
 }
 
 @media (width <=800px) {
-  .quotations-titles-sheet {
-    display: none;
-  }
 
   .quotation-view-btn {
     width: 100%;
     margin-top: 0.8rem;
-  }
-
-  .quotation-file {
-    display: flex;
-    flex-direction: column;
-    outline: 1px dashed rgb(182, 182, 182);
-    padding: 0.5rem;
-    border-radius: 1rem;
   }
 
 }

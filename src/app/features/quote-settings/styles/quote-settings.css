@@ -16,9 +16,3 @@
   justify-content: center;
   grid-template-columns: 2fr repeat(4, 1fr);
 }
-
-@media (width <=800px) {
-  .quote-settings-titles-sheet {
-    display: none;
-  }
-}

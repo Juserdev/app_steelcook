@@ -15,7 +15,10 @@ export const quotations_config: Quotations_Config = {
     text_button: "Ver cotización"
   },
   quotations_class: {
-    file: 'quotation-file',
+    file: {
+      class: 'quotation-file',
+      common: 'all-file'
+    },
     id: 'quotation-id',
     client: 'quotation-client',
     phone: 'quotation-phone',
