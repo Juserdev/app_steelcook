@@ -18,13 +18,21 @@
 }
 
 .quotation-view-btn {
+  cursor: pointer;
   border: none;
   outline: none;
+  width: 90%;
   background: white;
   outline: 1px dashed black;
   border-radius: 0.5rem;
   padding: 0.4rem 0;
-  margin-top: 0.8rem;
+  transition: background 0.3s ease;
+}
+
+.quotation-view-btn:hover {
+  background-color: rgb(206, 202, 202);
+  color: white;
+
 }
 
 .btn-add-product {
@@ -42,6 +50,11 @@
 @media (width <=800px) {
   .quotations-titles-sheet {
     display: none;
+  }
+
+  .quotation-view-btn {
+    width: 100%;
+    margin-top: 0.8rem;
   }
 
   .quotation-file {
