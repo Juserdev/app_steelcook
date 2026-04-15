@@ -7,13 +7,9 @@ export function quote_settings_title_sheets(quote_settings: Quote_Settings[], co
   const icon_edit = quote_settings_config.icons.edit
   const icon_remove = quote_settings_config.icons.remove
 
-  const quote_settings_file = document.createElement('div')
-  quote_settings_file.classList.add(qsc.qs.file)
-
-
   quote_settings.forEach(content => {
     const qs_file = document.createElement('div')
-    qs_file.classList.add(qsc.qs.content)
+    qs_file.classList.add(qsc.qs.content.class, qsc.qs.content.common)
     qs_file.dataset.id = content.id
 
     const observations = document.createElement('span')
@@ -39,18 +35,27 @@ export function quote_settings_title_sheets(quote_settings: Quote_Settings[], co
     const icons_container = document.createElement('div')
     icons_container.classList.add(quote_settings_config.icons.container_class)
 
+    const edit_container = document.createElement('div')
+    edit_container.classList.add('edit-container', 'er-container')
+
     const edit = document.createElement('img')
     edit.src = icon_edit.src
     edit.alt = icon_edit.alt
     edit.classList.add(icon_edit.class)
+
+    edit_container.appendChild(edit)
+
+    const remove_container = document.createElement('div')
+    remove_container.classList.add('remove-container', 'er-container')
 
     const remove = document.createElement('img')
     remove.src = icon_remove.src
     remove.alt = icon_remove.alt
     remove.classList.add(icon_remove.class)
 
-    icons_container.appendChild(edit)
-    icons_container.appendChild(remove)
+    remove_container.appendChild(remove)
+
+    icons_container.append(edit_container, remove_container)
 
     qs_file.appendChild(observations)
     qs_file.appendChild(warranty)

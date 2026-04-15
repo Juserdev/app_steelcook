@@ -21,12 +21,4 @@
   .quote-settings-titles-sheet {
     display: none;
   }
-
-  .qs-file {
-    display: flex;
-    flex-direction: column;
-    outline: 1px dashed rgb(182, 182, 182);
-    padding: 0.5rem;
-    border-radius: 1rem;
-  }
 }
