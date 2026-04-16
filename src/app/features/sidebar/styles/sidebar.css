@@ -1,3 +1,13 @@
+.sidebar {
+  max-width: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
 .container_logo {
   max-width: 100%;
   width: 100%;
@@ -16,10 +26,16 @@
 .interface-container {
   max-width: 100%;
   width: 100%;
-  padding: 50px 0;
+  padding: 3.8rem 2rem;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 2rem;
+  background-color: rgba(32, 32, 84, 0.3);
+  backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.707);
+  border-radius: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .btn-container {
@@ -28,33 +44,25 @@
   gap: 1rem;
   cursor: pointer;
   padding: 0.8rem 1.6rem;
-  background-color: rgba(255, 255, 255, 0.121);
+  background-color: var(--icons-bg-color);
   border-radius: 1rem;
-  backdrop-filter: blur(3px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.707);
-  transition:
-    background-color 0.3s ease,
-    backdrop-filter 0.3s ease,
-    -webkit-backdrop-filter 0.3s ease;
+  backdrop-filter: var(--icons-bd-filter);
+  border: var(--icons-border);
+  box-shadow: var(--icons-box-shadow);
+  transition: var(--icons-transition)
 }
 
 .btn-container:hover {
-  background-color: #ffffff;
-  color: black;
-
-  backdrop-filter: blur(0px);
-  -webkit-backdrop-filter: blur(0px);
-
-  border-color: rgba(255, 255, 255, 0.4);
-}
-
-.btn-container:hover .sidebar-icons {
-  fill: black;
+  background: rgb(0, 0, 0);
+  border-color: var(--icons-border-color);
 }
 
 
 @media (width <=800px) {
+
+  .sidebar {
+    position: relative;
+  }
 
   .container-logo {
     width: 100vw;
@@ -85,6 +93,7 @@
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.707);
     border-radius: 2rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    z-index: 1;
   }
 
   .btn-container {

@@ -1,5 +1,4 @@
 .list-container-product {
-  padding-top: var(--list-container-padding-top);
   display: flex;
   flex-direction: column;
   gap: clamp(0.7rem, 2vw + 0.5rem, 1rem);
@@ -15,4 +14,10 @@
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(2, 1fr) 3.5fr 1fr 1fr;
+}
+
+@media (width <=800px) {
+  .list-container-product {
+    padding-top: 2rem;
+  }
 }
