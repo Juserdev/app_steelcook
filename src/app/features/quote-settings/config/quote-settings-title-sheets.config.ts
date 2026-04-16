@@ -10,7 +10,7 @@ export const quote_settings_titles_sheets = [
     class: "quote-settings-sheet-warranty",
     common_class: "quote-settings-sheet",
   }, {
-    title: "TIEMPO DE ENTREGA",
+    title: "ENTREGA",
     class: "quote-settings-sheet-delivery-time",
     common_class: "quote-settings-sheet",
   }, {

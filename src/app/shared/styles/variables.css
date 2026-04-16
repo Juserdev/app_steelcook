@@ -15,4 +15,26 @@
 
   --interface-containet: rgba(159, 159, 159, 0.276);
   --bg-inputs: rgba(229, 229, 229, 0.399);
+
+  /* icons containers */
+
+  --icons-bg-color: rgba(32, 32, 84, 0.3);
+  --icons-bd-filter: blur(3px);
+  --icons-border: 1px solid rgba(255, 255, 255, 0.15);
+  --icons-border-radius: 2rem;
+  --icons-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  --icons-transition: background-color 0.3s ease, backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease;
+  --icons-transition-gradient: background 0.3s ease, backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease;
+
+  /* hover */
+
+  --icons-background-color: #2c20736e;
+  --icons-color: black;
+
+  --icons-backdrop-filter: blur(0px);
+  --icons-webkit-backdrop-filter: blur(0px);
+
+  --icons-border-color: rgba(255, 255, 255, 0.4);
+
+
 }
