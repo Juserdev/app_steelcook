@@ -41,7 +41,7 @@ export function profile_form(content: HTMLDivElement): HTMLFormElement {
 
   const button = document.createElement('button')
   button.type = form_profile_config.button.type
-  button.classList.add(form_profile_config.button.class)
+  button.classList.add(form_profile_config.button.class.specific, form_profile_config.button.class.common)
   button.textContent = form_profile_config.button.text
 
   form.appendChild(button)

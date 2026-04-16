@@ -1,9 +1,9 @@
-import type { Btn_Add_Quottion } from "@/app/features/quotations/types/btn.types"
+import type { Button_Form } from "@/app/shared/types/form.types"
 
-export function create_btns(form: HTMLFormElement, btn: Btn_Add_Quottion) {
+export function create_btns(form: HTMLFormElement, btn: Button_Form) {
   const add_product_btn = document.createElement("button")
   add_product_btn.type = btn.type
-  add_product_btn.classList.add(btn.class)
+  add_product_btn.classList.add(btn.class.specific, btn.class.common)
   add_product_btn.textContent = btn.text
 
   form.appendChild(add_product_btn)

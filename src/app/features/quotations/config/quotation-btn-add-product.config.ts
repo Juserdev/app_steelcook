@@ -1,8 +1,11 @@
-import type { Btn_Add_Quottion } from "@/app/features/quotations/types/btn.types"
+import type { Button_Form } from "@/app/shared/types/form.types"
 
-export const quotation_btn_add_product: Btn_Add_Quottion = {
+export const quotation_btn_add_product: Button_Form = {
   type: 'button',
-  class: 'btn-add-product',
-  text: "Agregar producto"
+  text: "Agregar producto",
+  class: {
+    specific: 'btn-add-product',
+    common: 'adp-btn'
+  }
 }
 

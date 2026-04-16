@@ -40,7 +40,7 @@ export function clients_form(header: HTMLDivElement): HTMLFormElement {
   const btn = document.createElement('button')
   btn.type = form_add_client.button.type
   btn.textContent = form_add_client.button.text
-  btn.classList.add(form_add_client.button.class)
+  btn.classList.add(form_add_client.button.class.specific, form_add_client.button.class.common)
 
   form.appendChild(btn)
 

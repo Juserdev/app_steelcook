@@ -32,7 +32,7 @@ export function settings_form(header: HTMLDivElement): HTMLFormElement {
   const btn = document.createElement('button')
   btn.type = form_add_quote_settings.button.type
   btn.textContent = form_add_quote_settings.button.text
-  btn.classList.add(form_add_quote_settings.button.class)
+  btn.classList.add(form_add_quote_settings.button.class.specific, form_add_quote_settings.button.class.common)
 
   form.appendChild(btn)
 

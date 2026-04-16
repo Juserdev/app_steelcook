@@ -7,8 +7,8 @@ import type { Products } from "@/app/features/products/types/products.types"
 import type { Quotations } from "@/app/features/quotations/types/quotations.types"
 
 export function content_home(clients: Clients[], products: Products[], quotations: Quotations[]): HTMLDivElement {
-  const home_content = homeContentConfig(clients, products, quotations)
 
+  const home_content = homeContentConfig(clients, products, quotations)
   const home_container = home_header()
   home_list(home_content, home_container)
 

@@ -83,7 +83,10 @@ export const form_add_quote_settings: Form_Add = {
   button: {
     type: "submit",
     text: "Enviar",
-    class: "btn-form-quote-settings"
+    class: {
+      specific: "btn-form-quote-settings",
+      common: 'all-btn-send'
+    }
   }
 }
 

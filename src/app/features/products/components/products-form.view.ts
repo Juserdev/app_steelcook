@@ -33,7 +33,7 @@ export function product_form(header: HTMLDivElement) {
   const btn = document.createElement('button')
   btn.type = form_add_product.button.type
   btn.textContent = form_add_product.button.text
-  btn.classList.add(form_add_product.button.class)
+  btn.classList.add(form_add_product.button.class.specific, form_add_product.button.class.common)
 
   form.appendChild(btn)
 
