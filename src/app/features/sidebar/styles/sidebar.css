@@ -86,6 +86,7 @@
     padding: 1rem;
     bottom: 0.8rem;
     left: 50%;
+    gap: 1rem;
     transform: translateX(-50%);
     background-color: rgba(32, 32, 84, 0.3);
     backdrop-filter: blur(3px);
@@ -97,7 +98,18 @@
   }
 
   .btn-container {
-    padding: 5px;
+    padding: 0.5rem;
+  }
+
+  .home-icon,
+  .profile-icon,
+  .clients-icon,
+  .products-icon,
+  .quotations-icon,
+  .quote-settings-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .home-text-btn,
