@@ -59,9 +59,8 @@ export function quotation_title_sheets(quotations: Quotations[], container: HTML
     const edit_container = document.createElement('div')
     edit_container.classList.add('edit-container', 'er-container')
 
-    const edit = document.createElement('img')
-    edit.src = icon_edit.src
-    edit.alt = icon_edit.alt
+    const edit = document.createElement('div')
+    edit.innerHTML = icon_edit.src
     edit.classList.add(icon_edit.class)
 
     edit_container.appendChild(edit)
@@ -69,9 +68,8 @@ export function quotation_title_sheets(quotations: Quotations[], container: HTML
     const remove_container = document.createElement('div')
     remove_container.classList.add('remove-container', 'er-container')
 
-    const remove = document.createElement('img')
-    remove.src = icon_remove.src
-    remove.alt = icon_remove.alt
+    const remove = document.createElement('div')
+    remove.innerHTML = icon_remove.src
     remove.classList.add(icon_remove.class)
 
     remove_container.appendChild(remove)
