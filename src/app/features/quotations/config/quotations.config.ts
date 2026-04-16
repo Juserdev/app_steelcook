@@ -27,7 +27,7 @@ export const quotations_config: Quotations_Config = {
     button: "quotation-view-btn"
   },
   add_quotation_btn: {
-    class: 'add-quotation-btn',
+    class: 'all-btn-add',
     text: 'Agregar cotizacion'
   }, icons: {
     container_class: 'conatiner-icons',

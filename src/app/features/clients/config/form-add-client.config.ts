@@ -113,6 +113,9 @@ export const form_add_client = {
   button: {
     type: "submit",
     text: "Enviar",
-    class: "btn-form-client"
+    class: {
+      specific: "btn-form-client",
+      common: 'all-btn-send'
+    }
   }
 } as const satisfies Form_Add

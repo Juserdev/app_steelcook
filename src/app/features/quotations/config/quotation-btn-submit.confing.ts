@@ -1,8 +1,12 @@
-import type { Btn_Add_Quottion } from "@/app/features/quotations/types/btn.types"
+import type { Button_Form } from "@/app/shared/types/form.types";
 
-export const quotation_btn_submit: Btn_Add_Quottion = {
+
+export const quotation_btn_submit: Button_Form = {
   type: 'submit',
-  class: 'quotation-btn-submit',
-  text: "Enviar"
+  text: "Enviar",
+  class: {
+    specific: 'quotation-btn-submit',
+    common: 'all-btn-send'
+  }
 }
 

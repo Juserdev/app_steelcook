@@ -23,7 +23,7 @@ export const products_config = {
     price: 'product-price'
   },
   add_product_btn: {
-    class: 'add-product-btn',
+    class: 'all-btn-add',
     text: 'Agregar producto'
   }, icons: {
     container_class: 'conatiner-product-icons',

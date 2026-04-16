@@ -96,7 +96,10 @@ export const form_profile_config: Form_Add = {
   button: {
     type: 'submit',
     text: 'Enviar',
-    class: 'btn-form-profile'
+    class: {
+      specific: 'btn-form-profile',
+      common: 'all-btn-send'
+    }
 
   }
 }

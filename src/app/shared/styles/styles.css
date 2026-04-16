@@ -72,16 +72,13 @@
   color: white;
 }
 
-.add-client-btn,
-.add-product-btn,
-.add-quotation-btn,
-.btn-all,
-.btn-form-client,
-.btn-form-product,
-.btn-form-profile,
-.quotation-btn-submit,
-.btn-edit-quote-settings,
-.btn-form-quote-settings {
+.ed-icons {
+  fill: white;
+}
+
+.all-btn-add,
+.all-btn-send {
+  width: 100%;
   border: none;
   outline: none;
   cursor: pointer;
@@ -106,12 +103,12 @@
   .left-container {
     max-width: 100vw;
     width: 100%;
-    /* height: 5rem; */
+    padding: 0;
   }
 
   .right-container {
     margin-bottom: 5rem;
-    padding-top: 4rem;
+    padding-top: 1rem;
   }
 
   .conatiner-profile-icons,
@@ -128,16 +125,8 @@
   }
 
 
-  .add-client-btn,
-  .add-product-btn,
-  .add-quotation-btn,
-  .btn-all,
-  .btn-form-client,
-  .btn-form-product,
-  .btn-form-profile,
-  .quotation-btn-submit,
-  .btn-edit-quote-settings,
-  .btn-form-quote-settings {
+  .all-btn-add,
+  .all-btn-send {
     width: 100%;
   }
 

@@ -55,17 +55,19 @@
 
 
 @media (width <=800px) {
-  /* .logo {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    max-width: 100%;
-    padding: 1rem 9rem;
-    background: var(--interface-containet);
-    backdrop-filter: blur(1rem);
+
+  .container-logo {
+    width: 100vw;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background-color: rgba(32, 32, 84, 0.3);
     border-radius: 0 0 1rem 1rem;
-  } */
+    backdrop-filter: blur(3px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.707);
+  }
 
   .interface-container {
     flex-direction: row;
