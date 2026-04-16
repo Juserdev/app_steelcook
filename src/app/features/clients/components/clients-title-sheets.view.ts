@@ -10,7 +10,7 @@ export function clients_title_sheets(clients: Clients[], container: HTMLDivEleme
     const icon_remove = clients_config.icons.remove
 
     const clients_file = document.createElement('div')
-    clients_file.classList.add(clients_config.clients_class.file)
+    clients_file.classList.add(clients_config.clients_class.file.class, clients_config.clients_class.file.common)
     clients_file.dataset.id = String(client.id)
     clients_file.dataset.name = client.name
     clients_file.dataset.client_id = String(client.client_id)
@@ -46,19 +46,27 @@ export function clients_title_sheets(clients: Clients[], container: HTMLDivEleme
     const icons_container = document.createElement('div')
     icons_container.classList.add(clients_config.icons.container_class)
 
+    const edit_container = document.createElement('div')
+    edit_container.classList.add('edit-container', 'er-container')
+
     const edit = document.createElement('img')
     edit.src = icon_edit.src
     edit.alt = icon_edit.alt
     edit.classList.add(icon_edit.class)
+
+    edit_container.appendChild(edit)
+
+    const remove_container = document.createElement('div')
+    remove_container.classList.add('remove-container', 'er-container')
 
     const remove = document.createElement('img')
     remove.src = icon_remove.src
     remove.alt = icon_remove.alt
     remove.classList.add(icon_remove.class)
 
-    icons_container.appendChild(edit)
-    icons_container.appendChild(remove)
+    remove_container.appendChild(remove)
 
+    icons_container.append(edit_container, remove_container)
 
     clients_file.appendChild(name)
     clients_file.appendChild(client_id)

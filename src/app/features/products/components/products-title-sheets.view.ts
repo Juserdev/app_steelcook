@@ -11,7 +11,7 @@ export function products_title_sheets(products: Products[], container: HTMLDivEl
     const icon_remove = products_config.icons.remove
 
     const products_file = document.createElement('div')
-    products_file.classList.add(products_config.products_class.file)
+    products_file.classList.add(products_config.products_class.file.class, products_config.products_class.file.common)
     products_file.dataset.id = product.id
     products_file.dataset.code = product.code
     products_file.dataset.name = product.name
@@ -42,18 +42,27 @@ export function products_title_sheets(products: Products[], container: HTMLDivEl
     const icons_container = document.createElement('div')
     icons_container.classList.add(products_config.icons.container_class)
 
+    const edit_container = document.createElement('div')
+    edit_container.classList.add('edit-container', 'er-container')
+
     const edit = document.createElement('img')
     edit.src = icon_edit.src
     edit.alt = icon_edit.alt
     edit.classList.add(icon_edit.class)
+
+    edit_container.appendChild(edit)
+
+    const remove_container = document.createElement('div')
+    remove_container.classList.add('remove-container', 'er-container')
 
     const remove = document.createElement('img')
     remove.src = icon_remove.src
     remove.alt = icon_remove.alt
     remove.classList.add(icon_remove.class)
 
-    icons_container.appendChild(edit)
-    icons_container.appendChild(remove)
+    remove_container.appendChild(remove)
+
+    icons_container.append(edit_container, remove_container)
 
     products_file.appendChild(product_code)
     products_file.appendChild(product_name)

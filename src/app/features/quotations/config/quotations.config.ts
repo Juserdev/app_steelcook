@@ -15,19 +15,22 @@ export const quotations_config: Quotations_Config = {
     text_button: "Ver cotización"
   },
   quotations_class: {
-    file: 'quotation-file',
+    file: {
+      class: 'quotation-file',
+      common: 'all-file'
+    },
     id: 'quotation-id',
     client: 'quotation-client',
     phone: 'quotation-phone',
     total: 'quotation-total',
     date: 'quotation-date',
-    button: "quotation-vew-btn"
+    button: "quotation-view-btn"
   },
   add_quotation_btn: {
     class: 'add-quotation-btn',
     text: 'Agregar cotizacion'
   }, icons: {
-    container_class: 'conatiner-quotation-icons',
+    container_class: 'conatiner-icons',
     edit: {
       src: icons.edit,
       alt: 'icon edit',

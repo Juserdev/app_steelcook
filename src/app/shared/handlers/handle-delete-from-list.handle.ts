@@ -4,7 +4,7 @@ export function handle_delete_from_list(
   item_class: string,
   removeItem: (TOKEN: string, id: string) => Promise<any>
 ) {
-  const icon_delete = list.querySelectorAll<HTMLImageElement>('.icon-delete')
+  const icon_delete = list.querySelectorAll<HTMLImageElement>('.remove-container')
 
   icon_delete.forEach(icon => {
 

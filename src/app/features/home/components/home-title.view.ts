@@ -5,7 +5,7 @@ export function home_title() {
   list_container.classList.add("list-container-home")
 
   const home_titles_sheet_container = document.createElement("div")
-  home_titles_sheet_container.classList.add("home-titles-sheet")
+  home_titles_sheet_container.classList.add("home-titles-sheet", 'all-titles-sheet')
 
   list_container.appendChild(home_titles_sheet_container)
 

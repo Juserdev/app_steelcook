@@ -6,11 +6,15 @@ export function sidebar(profile: Profile[]): HTMLDivElement {
   const sidebar = document.createElement("div")
   sidebar.classList.add('sidebar')
 
+  const container_logo = document.createElement('div')
+  container_logo.classList.add('container-logo')
+
   const logo = document.createElement("img")
   logo.classList.add("logo")
   logo.src = profile[0]?.logo ?? ''
 
-  sidebar.appendChild(logo)
+  container_logo.appendChild(logo)
+  sidebar.appendChild(container_logo)
 
   const interface_container = document.createElement('div')
   interface_container.classList.add('interface-container')
@@ -22,9 +26,9 @@ export function sidebar(profile: Profile[]): HTMLDivElement {
     container_btn.classList.add(button.container.container_class, button.container.container_class_key)
     container_btn.dataset.section = button.key
 
-    const icon_btn = document.createElement("img")
+    const icon_btn = document.createElement("div")
     icon_btn.classList.add(button.icon.class)
-    icon_btn.src = button.icon.svg
+    icon_btn.innerHTML = button.icon.svg
 
     const name_btn = document.createElement("span")
     name_btn.classList.add(button.name_btn.class)

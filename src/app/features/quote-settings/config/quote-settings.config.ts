@@ -13,7 +13,10 @@ export const quote_settings_config = {
   },
   qs: {
     file: 'list-qs',
-    content: "qs-file",
+    content: {
+      class: "qs-file",
+      common: 'all-file'
+    },
     observations: {
       title: 'Observaciones',
       class: 'qs-observation-title',

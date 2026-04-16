@@ -17,13 +17,22 @@
   grid-template-columns: repeat(7, 1fr);
 }
 
-.quotation-vew-btn {
+.quotation-view-btn {
+  cursor: pointer;
   border: none;
   outline: none;
+  width: 90%;
   background: white;
   outline: 1px dashed black;
   border-radius: 0.5rem;
   padding: 0.4rem 0;
+  transition: background 0.3s ease;
+}
+
+.quotation-view-btn:hover {
+  background-color: rgb(206, 202, 202);
+  color: white;
+
 }
 
 .btn-add-product {
@@ -39,16 +48,10 @@
 }
 
 @media (width <=800px) {
-  .quotations-titles-sheet {
-    display: none;
-  }
 
-  .quotation-file {
-    display: flex;
-    flex-direction: column;
-    outline: 1px dashed rgb(182, 182, 182);
-    padding: 0.5rem;
-    border-radius: 1rem;
+  .quotation-view-btn {
+    width: 100%;
+    margin-top: 0.8rem;
   }
 
 }
