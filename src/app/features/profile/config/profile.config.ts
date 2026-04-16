@@ -27,7 +27,7 @@ export const profile_config: Profile_Config = {
   },
   button: {
     type: 'button',
-    class: 'btn-all',
+    class: 'all-btn-add',
     text: 'Agregar o editar perfil',
     dataset: 'add_profile'
   },

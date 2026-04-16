@@ -76,15 +76,15 @@
   fill: white;
 }
 
-.add-client-btn,
-.add-product-btn,
-.add-quotation-btn,
-.btn-all,
+/* .add-client-btn, */
+/* .add-product-btn, */
+/* .add-quotation-btn, */
+.all-btn-add,
 .btn-form-client,
 .btn-form-product,
 .btn-form-profile,
 .quotation-btn-submit,
-.btn-edit-quote-settings,
+/* .btn-edit-quote-settings, */
 .btn-form-quote-settings {
   border: none;
   outline: none;
@@ -132,15 +132,15 @@
   }
 
 
-  .add-client-btn,
-  .add-product-btn,
-  .add-quotation-btn,
-  .btn-all,
+  /* .add-client-btn, */
+  /* .add-product-btn, */
+  /* .add-quotation-btn, */
+  .all-btn-add,
   .btn-form-client,
   .btn-form-product,
   .btn-form-profile,
   .quotation-btn-submit,
-  .btn-edit-quote-settings,
+  /* .btn-edit-quote-settings, */
   .btn-form-quote-settings {
     width: 100%;
   }

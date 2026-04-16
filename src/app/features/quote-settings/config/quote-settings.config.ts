@@ -40,7 +40,7 @@ export const quote_settings_config = {
   },
   add_qs_btn: {
     type: 'button',
-    class: 'btn-edit-quote-settings',
+    class: 'all-btn-add',
     text: 'Agregar configuraciones',
     dataset: 'add_quote_settings'
   },

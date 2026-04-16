@@ -24,7 +24,7 @@ export const clients_config: Clients_config = {
     phone: 'client-phone'
   },
   add_client_btn: {
-    class: 'add-client-btn',
+    class: 'all-btn-add',
     text: 'Agregar Cliente'
   },
   icons: {
