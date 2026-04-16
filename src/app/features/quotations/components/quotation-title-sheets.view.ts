@@ -10,7 +10,7 @@ export function quotation_title_sheets(quotations: Quotations[], container: HTML
     const icon_remove = quotations_config.icons.remove
 
     const quotation_file = document.createElement('div')
-    quotation_file.classList.add(quotations_config.quotations_class.file)
+    quotation_file.classList.add(quotations_config.quotations_class.file.class, quotations_config.quotations_class.file.common)
     quotation_file.dataset.id = quotation.id
 
     const quotation_id = document.createElement('span')
@@ -56,18 +56,25 @@ export function quotation_title_sheets(quotations: Quotations[], container: HTML
     const icons_container = document.createElement('div')
     icons_container.classList.add(quotations_config.icons.container_class)
 
-    const edit = document.createElement('img')
-    edit.src = icon_edit.src
-    edit.alt = icon_edit.alt
+    const edit_container = document.createElement('div')
+    edit_container.classList.add('edit-container', 'er-container')
+
+    const edit = document.createElement('div')
+    edit.innerHTML = icon_edit.src
     edit.classList.add(icon_edit.class)
 
-    const remove = document.createElement('img')
-    remove.src = icon_remove.src
-    remove.alt = icon_remove.alt
+    edit_container.appendChild(edit)
+
+    const remove_container = document.createElement('div')
+    remove_container.classList.add('remove-container', 'er-container')
+
+    const remove = document.createElement('div')
+    remove.innerHTML = icon_remove.src
     remove.classList.add(icon_remove.class)
 
-    icons_container.appendChild(edit)
-    icons_container.appendChild(remove)
+    remove_container.appendChild(remove)
+
+    icons_container.append(edit_container, remove_container)
 
     quotation_file.appendChild(icons_container)
 

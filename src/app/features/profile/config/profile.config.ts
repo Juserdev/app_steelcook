@@ -15,7 +15,10 @@ export const profile_config: Profile_Config = {
   },
   logo: 'profile-logo',
   profile_class: {
-    file: 'profile-file',
+    file: {
+      class: 'profile-file',
+      common: 'all-file'
+    },
     company: 'profile-company',
     company_id: 'profile-id',
     email: 'profile-email',
@@ -24,7 +27,7 @@ export const profile_config: Profile_Config = {
   },
   button: {
     type: 'button',
-    class: 'btn-edit-profile',
+    class: 'all-btn-add',
     text: 'Agregar o editar perfil',
     dataset: 'add_profile'
   },

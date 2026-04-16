@@ -9,7 +9,7 @@ export function profile_title_shetts(company_profile: Profile[], container: HTML
     const icon_remove = profile_config.icons.remove
 
     const profile_file = document.createElement('div')
-    profile_file.classList.add(profile_config.profile_class.file)
+    profile_file.classList.add(profile_config.profile_class.file.class, profile_config.profile_class.file.common)
     profile_file.dataset.id = profile.id
 
     const profile_company = document.createElement('span')
@@ -40,18 +40,26 @@ export function profile_title_shetts(company_profile: Profile[], container: HTML
     const icons_container = document.createElement('div')
     icons_container.classList.add(profile_config.icons.container_class)
 
-    const edit = document.createElement('img')
-    edit.src = icon_edit.src
-    edit.alt = icon_edit.alt
+    const edit_container = document.createElement('div')
+    edit_container.classList.add('edit-container', 'er-container')
+
+    const edit = document.createElement('div')
+    edit.innerHTML = icon_edit.src
     edit.classList.add(icon_edit.class)
 
-    const remove = document.createElement('img')
-    remove.src = icon_remove.src
-    remove.alt = icon_remove.alt
+    edit_container.appendChild(edit)
+
+    const remove_container = document.createElement('div')
+    remove_container.classList.add('remove-container', 'er-container')
+
+    const remove = document.createElement('div')
+    remove.innerHTML = icon_remove.src
     remove.classList.add(icon_remove.class)
 
-    icons_container.appendChild(edit)
-    icons_container.appendChild(remove)
+    remove_container.appendChild(remove)
+
+    icons_container.append(edit_container, remove_container)
+
 
     profile_file.appendChild(profile_company)
     profile_file.appendChild(profile_id)

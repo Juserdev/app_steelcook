@@ -11,13 +11,9 @@
 }
 
 @media (width <=800px) {
-  .home-titles-sheet {
-    display: none;
-  }
 
-  .home-file {
-    display: flex;
-    flex-direction: column;
+  .home-container-info:last-child {
+    border-bottom: none;
   }
 
 }

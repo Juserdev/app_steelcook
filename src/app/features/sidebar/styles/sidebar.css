@@ -1,7 +1,16 @@
-.logo {
-  /* max-width: 230px; */
-  max-width: clamp(12rem, 5vw + 14rem, 20rem);
+.container_logo {
+  max-width: 100%;
   width: 100%;
+}
+
+.logo {
+  max-width: 100%;
+  width: clamp(10rem, 5vw + 9rem, 20rem);
+}
+
+.sidebar-icons {
+  fill: white;
+  transition: fill 0.3s ease;
 }
 
 .interface-container {
@@ -16,29 +25,48 @@
 .btn-container {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 1rem;
   cursor: pointer;
-  padding: 10px 20px;
-  background-color: rgb(224, 224, 224);
+  padding: 0.8rem 1.6rem;
+  background-color: rgba(255, 255, 255, 0.121);
   border-radius: 1rem;
-  transition: background-color 0.3s ease;
+  backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.707);
+  transition:
+    background-color 0.3s ease,
+    backdrop-filter 0.3s ease,
+    -webkit-backdrop-filter 0.3s ease;
 }
 
 .btn-container:hover {
-  background-color: rgb(221, 220, 220);
+  background-color: #ffffff;
+  color: black;
+
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
+.btn-container:hover .sidebar-icons {
+  fill: black;
+}
+
+
 @media (width <=800px) {
-  .logo {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    max-width: 100%;
-    padding: 0 9rem;
-    background: var(--interface-containet);
-    backdrop-filter: blur(1rem);
+
+  .container-logo {
+    width: 100vw;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background-color: rgba(32, 32, 84, 0.3);
     border-radius: 0 0 1rem 1rem;
+    backdrop-filter: blur(3px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.707);
   }
 
   .interface-container {
@@ -51,8 +79,10 @@
     bottom: 0.8rem;
     left: 50%;
     transform: translateX(-50%);
-    background-color: var(--interface-containet);
-    backdrop-filter: blur(1rem);
+    background-color: rgba(32, 32, 84, 0.3);
+    backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.707);
     border-radius: 2rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   }

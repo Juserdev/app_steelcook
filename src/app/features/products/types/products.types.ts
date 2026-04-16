@@ -18,7 +18,10 @@ export interface Products_Config {
     text: string
   }
   products_class: {
-    file: string
+    file: {
+      class: string
+      common: string
+    }
     code: string
     name: string
     description: string

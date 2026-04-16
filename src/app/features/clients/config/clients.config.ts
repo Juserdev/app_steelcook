@@ -13,7 +13,10 @@ export const clients_config: Clients_config = {
     text: 'Clientes'
   },
   clients_class: {
-    file: 'client-file',
+    file: {
+      class: 'client-file',
+      common: 'all-file'
+    },
     name: 'client-name',
     id: 'client-id',
     email: 'client-email',
@@ -21,7 +24,7 @@ export const clients_config: Clients_config = {
     phone: 'client-phone'
   },
   add_client_btn: {
-    class: 'add-client-btn',
+    class: 'all-btn-add',
     text: 'Agregar Cliente'
   },
   icons: {

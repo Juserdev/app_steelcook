@@ -13,7 +13,10 @@ export const quote_settings_config = {
   },
   qs: {
     file: 'list-qs',
-    content: "qs-file",
+    content: {
+      class: "qs-file",
+      common: 'all-file'
+    },
     observations: {
       title: 'Observaciones',
       class: 'qs-observation-title',
@@ -37,7 +40,7 @@ export const quote_settings_config = {
   },
   add_qs_btn: {
     type: 'button',
-    class: 'btn-edit-quote-settings',
+    class: 'all-btn-add',
     text: 'Agregar configuraciones',
     dataset: 'add_quote_settings'
   },

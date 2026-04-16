@@ -47,7 +47,10 @@ export interface Form_Field {
 export interface Button_Form {
   type: Button_Type
   text: string
-  class: string
+  class: {
+    specific: string
+    common: string
+  }
 }
 
 export interface Form_Add {

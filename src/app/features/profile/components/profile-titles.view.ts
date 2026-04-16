@@ -1,5 +1,5 @@
-import { profile_config, profile_titles_sheets } from "@/app/features/profile/config/profile.config"
-import type { Profile } from "@/app/features/profile/types/profile.types"
+import { profile_config, profile_titles_sheets } from '@/app/features/profile/config/profile.config'
+import type { Profile } from '@/app/features/profile/types/profile.types'
 
 export function profile_titles(company_profile: Profile[]) {
   const list_container_profile = document.createElement('div')
@@ -11,13 +11,13 @@ export function profile_titles(company_profile: Profile[]) {
 
   list_container_profile.appendChild(profile_logo)
 
-  const profile_titles_sheet_container = document.createElement("div")
-  profile_titles_sheet_container.classList.add("profile-titles-sheet")
+  const profile_titles_sheet_container = document.createElement('div')
+  profile_titles_sheet_container.classList.add('profile-titles-sheet', 'all-titles-sheet')
 
   list_container_profile.appendChild(profile_titles_sheet_container)
 
   profile_titles_sheets.forEach(title => {
-    const titles = document.createElement("h3")
+    const titles = document.createElement('h3')
     titles.classList.add(title.class, title.common_class)
     titles.textContent = title.title
 

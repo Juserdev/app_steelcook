@@ -1,6 +1,6 @@
-import type { Titles_Sheets } from "@/app/shared/types/ui.types"
-import { icons } from "@/app/shared/config/icons.config"
 import type { Products_Config } from "@/app/features/products/types/products.types"
+import { icons } from "@/app/shared/config/icons.config"
+import type { Titles_Sheets } from "@/app/shared/types/ui.types"
 
 export const products_config = {
   products_content_class: {
@@ -13,14 +13,17 @@ export const products_config = {
     text: 'Productos'
   },
   products_class: {
-    file: 'product-file',
+    file: {
+      class: 'product-file',
+      common: 'all-file'
+    },
     code: 'product-code',
     name: 'product-name',
     description: 'product-description',
     price: 'product-price'
   },
   add_product_btn: {
-    class: 'add-product-btn',
+    class: 'all-btn-add',
     text: 'Agregar producto'
   }, icons: {
     container_class: 'conatiner-product-icons',
@@ -52,7 +55,7 @@ export const product_titles_sheets = [
     class: "product-sheet-description",
     common_class: "product-sheet"
   }, {
-    title: "FECHA",
+    title: "PRECIO",
     class: "product-sheet-price",
     common_class: "product-sheet"
   },

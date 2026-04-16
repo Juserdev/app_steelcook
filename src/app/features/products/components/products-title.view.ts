@@ -5,7 +5,7 @@ export function products_title(): HTMLDivElement {
   list_container.classList.add("list-container-product")
 
   const product_titles_sheet_container = document.createElement("div")
-  product_titles_sheet_container.classList.add("products-titles-sheet")
+  product_titles_sheet_container.classList.add("products-titles-sheet", 'all-titles-sheet')
 
   list_container.appendChild(product_titles_sheet_container)
 
