@@ -6,6 +6,11 @@
   --btns-add-padding: 0.8rem 1.5rem;
   --list-container-padding-top: 1rem;
 
+  --bg-gradient: radial-gradient(circle at center, #1a1a3a 0%, #0a0a12 60%, #000000 100%);
+  --text-main: rgba(255, 255, 255, 0.95);
+  --text-muted: rgba(234, 234, 234, 0.93);
+  --text-dim: rgba(255, 255, 255, 0.50);
+
   /* colors */
 
   --interface-containet: rgba(159, 159, 159, 0.276);
