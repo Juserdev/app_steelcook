@@ -1,10 +1,10 @@
 import type { Button_Form } from "@/app/shared/types/form.types"
 
-export const quotation_btn_add_product: Button_Form = {
+export const quotation_btn_remove_product: Button_Form = {
   type: 'button',
-  text: "Agregar producto",
+  text: "Eliminar producto",
   class: {
-    specific: 'btn-add-product',
+    specific: 'btn-remove-product',
     common: 'qar-btn'
   }
 }
