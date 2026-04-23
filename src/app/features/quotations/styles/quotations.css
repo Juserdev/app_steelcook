@@ -34,7 +34,13 @@
 
 }
 
-.btn-add-product {
+.container-btns-ar {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+}
+
+.qar-btn {
   margin-top: 0.5rem;
   width: 100%;
   border: none;
