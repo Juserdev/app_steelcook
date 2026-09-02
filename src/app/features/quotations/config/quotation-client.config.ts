@@ -64,7 +64,7 @@ export const form_client_aq: Form_Field[] = [
       type: "text",
       id: "client_address",
       name: "client_address",
-      placeholder: "3001234567...",
+      placeholder: "Calle 123...",
       class: { specific: "faq-client-input-address", common: "faq-client-input" }
     }
   },

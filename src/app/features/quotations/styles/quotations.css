@@ -52,6 +52,15 @@
   border-radius: 1rem;
 }
 
+.form-add-quotation {
+  padding-top: var(--list-container-padding-top);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
 @media (width <=800px) {
 
   .list-container-quotations {
