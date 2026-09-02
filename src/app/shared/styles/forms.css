@@ -1,7 +1,7 @@
 .form-add-clients,
 .form-add-products,
-.containet-input-label,
-.form-add-quotation,
+.form-add-profile,
+/* .form-add-quotation, */
 .form-add-quote-settings {
   padding-top: var(--list-container-padding-top);
   display: flex;
@@ -19,16 +19,18 @@
   font-size: var(--font-size-titles-list);
 }
 
-.section-faq-profile,
-.section-faq-client,
-.section-faq-qs,
-.section-faq-product,
-.section-faq-total,
 .container-profile-aq,
 .container-quotation-aq,
 .container-client-aq,
 .container-product-aq,
-.container-total-aq {
+.container-total-aq,
+/* Esta parte deseo cambiarla para uqe se vean como tarjetas */
+.containet-input-label,
+.section-faq-profile,
+.section-faq-client,
+.section-faq-qs,
+.section-faq-product,
+.section-faq-total {
   max-width: 100%;
   width: 100%;
   display: flex;
@@ -66,4 +68,12 @@
   border: none;
   background: var(--bg-inputs);
   font-size: 1rem;
+}
+
+.containet-input-label input,
+.form-add-clients input,
+.form-add-products input,
+.form-add-quotation input,
+.form-add-quote-settings input {
+  color: var(--inputs-color);
 }

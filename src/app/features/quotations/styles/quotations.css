@@ -34,7 +34,13 @@
 
 }
 
-.btn-add-product {
+.container-btns-ar {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+}
+
+.qar-btn {
   margin-top: 0.5rem;
   width: 100%;
   border: none;
@@ -44,6 +50,15 @@
   outline: 1px solid black;
   padding: var(--btns-add-padding);
   border-radius: 1rem;
+}
+
+.form-add-quotation {
+  padding-top: var(--list-container-padding-top);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5rem;
 }
 
 @media (width <=800px) {

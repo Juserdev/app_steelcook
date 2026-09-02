@@ -9,6 +9,7 @@ import { create_form } from '@/app/features/quotations/components/create-form.vi
 import { ids_readonly } from '@/app/features/quotations/config/ids-readonly.config'
 import { ids_required } from '@/app/features/quotations/config/ids-required.config'
 import { quotation_btn_add_product } from '@/app/features/quotations/config/quotation-btn-add-product.config'
+import { quotation_btn_remove_product } from '@/app/features/quotations/config/quotation-btn-remove-product.config'
 import { quotation_btn_submit } from '@/app/features/quotations/config/quotation-btn-submit.confing'
 import { form_client_aq } from '@/app/features/quotations/config/quotation-client.config'
 import { profile_inputs_map, settings_inputs_map } from '@/app/features/quotations/config/quotation-fill-maps.config'
@@ -20,6 +21,7 @@ import { form_quote_settings_aq } from '@/app/features/quotations/config/quotati
 import { handle_client_autofill } from '@/app/features/quotations/handlers/handle-client-autofill.handle'
 import { handle_product_add } from '@/app/features/quotations/handlers/handle-product-add.handle'
 import { handle_product_autofill } from '@/app/features/quotations/handlers/handle-product-autofill.handle'
+import { handle_product_remove } from '@/app/features/quotations/handlers/handle-product-remove.handle'
 import { handle_product_total } from '@/app/features/quotations/handlers/handle-product-total.handle'
 import { handler_total_discount } from '@/app/features/quotations/handlers/handle-total-discount.handle'
 import { handle_total_tax_amount } from '@/app/features/quotations/handlers/handle-total-tax-amount'
@@ -80,10 +82,22 @@ export function quotation_form(
 
   handle_product_autofill(section_products, products)
 
-  // Boton para agregar productos 
+  // Botones para agregar y eliminar productos 
 
-  const btn_add_product = create_btns(form, quotation_btn_add_product)
+  const container_btns_ar = document.createElement('div')
+  container_btns_ar.classList.add('container-btns-ar')
+
+  const btn_add_product = create_btns(quotation_btn_add_product)
+  const btn_remove_product = create_btns(quotation_btn_remove_product)
+
+  container_btns_ar.append(btn_add_product, btn_remove_product)
+  form.appendChild(container_btns_ar)
+
+  // Funciones para agregar y eliminar productos
+
+
   handle_product_add(btn_add_product, section_products)
+  handle_product_remove(btn_remove_product)
 
   // Formulario con detalles finales
 
@@ -100,7 +114,7 @@ export function quotation_form(
 
   // Boton submit
 
-  const btn_submit = create_btns(form, quotation_btn_submit)
+  const btn_submit = create_btns(quotation_btn_submit)
   form.appendChild(btn_submit)
 
   header.appendChild(form)

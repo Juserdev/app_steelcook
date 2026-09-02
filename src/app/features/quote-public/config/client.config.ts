@@ -35,7 +35,7 @@ export function client_config(qp: Quote_Public): Info_Config[] {
       class_item: 'row-container',
       title: 'Dirección: ',
       class_title: 'row-title',
-      content: qp.profile_snapshot.address,
+      content: qp.client_snapshot.address,
       class_content: 'row-text'
     }
   ] as const satisfies Info_Config[]
